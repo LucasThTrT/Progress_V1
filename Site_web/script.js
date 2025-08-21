@@ -1,9 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const refuserBtn = document.getElementById('refuser-btn');
+    const accepterBtn = document.getElementById('accepter-btn');
+    const buttonContainer = document.getElementById('button-container');
+    const videoContainer = document.getElementById('video-container');
     let currentX = 0;
     let currentY = 0;
 
-    // Gestion du clic pour faire disparaître le bouton
+    // Gestion du clic sur le bouton Accepter
+    accepterBtn.addEventListener('click', function() {
+        buttonContainer.style.display = 'none';
+        videoContainer.style.display = 'flex';
+    });
+
+    // Gestion du clic pour faire disparaître le bouton Refuser
     refuserBtn.addEventListener('click', function() {
         refuserBtn.style.display = 'none';
     });
@@ -20,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
             Math.pow(mouseX - btnCenterX, 2) + Math.pow(mouseY - btnCenterY, 2)
         );
         
-        if (distance < 100) {
+        if (distance < 2000) {
             // Calculer la direction opposée à la souris
             const directionX = btnCenterX - mouseX;
             const directionY = btnCenterY - mouseY;

@@ -4,16 +4,25 @@
 <meta charset=utf-8 />
 <title>Progress</title>
 <link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
 </head>
 <body>   
   <h1 class="challenge">Progress vous lance un défi !</h1>    
   
   <div class="content-wrapper">
-    <div class="button-container">
-      <button class="Accepter">Accepter</button>
+    <div class="button-container" id="button-container">
+      <button class="Accepter" id="accepter-btn">Accepter</button>
       <button class="Refuser" id="refuser-btn">Refuser</button>
     </div>
+    
+    <div class="video-container" id="video-container" style="display: none;">
+      <video controls autoplay width="80%" height="auto">
+        <source src="Chipi.mp4" type="video/mp4">
+        La tuile ça ne marche pas... 
+        TO DO METTRE UN LIEN POUR LA VIDEO
+      </video>
+    </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
