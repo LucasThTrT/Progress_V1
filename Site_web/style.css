@@ -1,0 +1,60 @@
+@-webkit-keyframes typing { from { width: 0; } } 
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }  
+
+h1.challenge {  
+	font: bold 300% Consolas, Monaco, monospace; 
+	border-right: .1em solid black; 
+	width: 16.5em;  
+	width: 29ch; 
+	margin: 1em 1em; 
+	white-space: nowrap; 
+	overflow: hidden; 
+	-webkit-animation: typing 3.5s steps(29, end), 
+	        blink-caret .5s step-end infinite alternate; 
+}  
+
+.button-container {     
+    display: flex;     
+    justify-content: center;     
+    align-items: center;     
+    gap: 10%; 
+    width: 100%;
+}      
+
+.button-container button {         
+    font: bold 1em Arial, sans-serif;         
+    color: white;         
+    padding: 14px 20px;         
+    margin: 8px 0;         
+    border: none;         
+    cursor: pointer;         
+    width: 20%;         
+    height: 10vh;         
+    border-radius: 20px;     
+}      
+
+.Accepter {     
+    background-color: #4CAF50;          
+}      
+
+.Refuser {         
+    background-color: #f44336;
+    transition: transform 0.1s ease;
+    position: relative;
+}
+
+/* Styles ajoutés pour le centrage */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
