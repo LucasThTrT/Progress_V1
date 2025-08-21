@@ -5,11 +5,11 @@ h1.challenge {
 	font: bold 300% Consolas, Monaco, monospace; 
 	border-right: .1em solid black; 
 	width: 16.5em;  
-	width: 29ch; 
+	width: 34ch; 
 	margin: 1em 1em 0em 1em; 
 	white-space: nowrap; 
 	overflow: hidden; 
-	-webkit-animation: typing 3.5s steps(29, end), 
+	-webkit-animation: typing 3.5s steps(34, end), 
 	        blink-caret .5s step-end infinite alternate; 
 }  
 
