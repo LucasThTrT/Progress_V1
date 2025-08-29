@@ -1,17 +1,40 @@
 @-webkit-keyframes typing { from { width: 0; } } 
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }  
 
-h1.challenge {  
-	font: bold 300% Consolas, Monaco, monospace; 
+h1.challenge.main-title {  
+	font: bold 250% Consolas, Monaco, monospace; 
 	border-right: .1em solid black; 
-	width: 16.5em;  
-	width: 34ch; 
-	margin: 1em 1em 0em 1em; 
+	width: 16em;  
+	width: 43ch; 
+	margin: 1em 0.5em 1em; 
 	white-space: nowrap; 
 	overflow: hidden; 
-	-webkit-animation: typing 3.5s steps(34, end), 
+	-webkit-animation: typing 3.5s steps(43, end), 
 	        blink-caret .5s step-end infinite alternate; 
 }  
+
+h2.challenge.subtitle.first {  
+	font: bold 150% Consolas, Monaco, monospace; 
+	width: 10em;  
+	width: 43ch;
+	margin: 0.5em 1em 1em; 
+	white-space: nowrap; 
+	overflow: hidden; 
+	-webkit-animation: typing 2s steps(43, end) 3.5s both, 
+	        blink-caret .5s step-end infinite alternate; 
+}  
+
+h2.challenge.subtitle.second {  
+	font: bold 150% Consolas, Monaco, monospace; 
+	width: 12em;  
+	width: 30ch;
+	margin: 0.5em 1em 1em; 
+	white-space: nowrap; 
+	overflow: hidden; 
+	-webkit-animation: typing 2.5s steps(30, end) 5.5s both, 
+	        blink-caret .5s step-end infinite alternate; 
+}  
+
 
 .button-container {     
     display: flex;     
@@ -73,3 +96,45 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+
+.after-accept {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.after-accept-text {
+    font: bold 150% Consolas, Monaco, monospace;
+    margin: 1em 0;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.after-accept-text.first {
+    margin-bottom: 7em;
+    width: 68ch;
+    -webkit-animation: typing 3s steps(68, end), 
+            blink-caret .5s step-end infinite alternate;
+}
+
+.after-accept-text.second {
+    font: bold 160% Consolas, Monaco, monospace;
+    margin-top: 4em;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 14ch;
+    -webkit-animation: typing 3s steps(14, end) 3s both, 
+            blink-caret .5s step-end infinite alternate;
+}
+

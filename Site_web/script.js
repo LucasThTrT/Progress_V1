@@ -3,13 +3,23 @@ document.addEventListener('DOMContentLoaded', function() {
     const accepterBtn = document.getElementById('accepter-btn');
     const buttonContainer = document.getElementById('button-container');
     const videoContainer = document.getElementById('video-container');
+    const afterAccept = document.getElementById('after-accept');
+    const subtitle1 = document.querySelector('.challenge.subtitle.first');
+    const subtitle2 = document.querySelector('.challenge.subtitle.second');
     let currentX = 0;
     let currentY = 0;
 
     // Gestion du clic sur le bouton Accepter
     accepterBtn.addEventListener('click', function() {
+        // Masquer les subtitles
+        subtitle1.style.display = 'none';
+        subtitle2.style.display = 'none';
+        
+        // Masquer les boutons
         buttonContainer.style.display = 'none';
-        videoContainer.style.display = 'flex';
+        
+        // Afficher after-accept
+        afterAccept.style.display = 'block';
     });
 
     // Gestion du clic pour faire disparaître le bouton Refuser
