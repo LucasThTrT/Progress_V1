@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Gestion du clic sur le bouton Accepter
     accepterBtn.addEventListener('click', function() {
+        // Changer le texte du titre principal
+        const mainTitle = document.querySelector('h1.challenge.main-title');
+        mainTitle.textContent = 'Challenge accepté !';
+        mainTitle.classList.add('accepted');
+        
         // Masquer les subtitles
         subtitle1.style.display = 'none';
         subtitle2.style.display = 'none';
@@ -39,14 +44,14 @@ document.addEventListener('DOMContentLoaded', function() {
             Math.pow(mouseX - btnCenterX, 2) + Math.pow(mouseY - btnCenterY, 2)
         );
         
-        if (distance < 2000) {
+        if (distance < 4000) {
             // Calculer la direction opposée à la souris
             const directionX = btnCenterX - mouseX;
             const directionY = btnCenterY - mouseY;
             
             // Calculer l'intensité du mouvement selon la distance
             const intensity = (100 - distance) / 100;
-            const moveDistance = 200 * intensity;
+            const moveDistance = 400 * intensity;
             
             // Normaliser la direction
             const magnitude = Math.sqrt(directionX * directionX + directionY * directionY);

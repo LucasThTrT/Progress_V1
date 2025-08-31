@@ -11,6 +11,19 @@ h1.challenge.main-title {
 	overflow: hidden; 
 	-webkit-animation: typing 3.5s steps(43, end), 
 	        blink-caret .5s step-end infinite alternate; 
+}
+
+h1.challenge.main-title.accepted {
+	font: bold 250% Consolas, Monaco, monospace; 
+	border-right: .1em solid #4CAF50; 
+    color: #4CAF50;
+	width: 16em;  
+	width: 19ch; 
+	margin: 1em 0.5em 1em; 
+	white-space: nowrap; 
+	overflow: hidden; 
+	-webkit-animation: typing 3.5s steps(19, end), 
+	        blink-caret .5s step-end infinite alternate; 
 }  
 
 h2.challenge.subtitle.first {  
@@ -122,19 +135,24 @@ body {
 }
 
 .after-accept-text.first {
-    margin-bottom: 7em;
     width: 68ch;
     -webkit-animation: typing 3s steps(68, end), 
             blink-caret .5s step-end infinite alternate;
 }
 
 .after-accept-text.second {
+    width: 68ch;
+    -webkit-animation: typing 3s steps(68, end) 3s both, 
+            blink-caret .5s step-end infinite alternate;
+}
+
+.after-accept-text.third {
     font: bold 160% Consolas, Monaco, monospace;
     margin-top: 4em;
     white-space: nowrap;
     overflow: hidden;
     width: 14ch;
-    -webkit-animation: typing 3s steps(14, end) 3s both, 
+    -webkit-animation: typing 3s steps(14, end) 4s both, 
             blink-caret .5s step-end infinite alternate;
 }
 
